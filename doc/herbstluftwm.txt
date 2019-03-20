@@ -320,7 +320,7 @@ cycle_all [*--skip-invisible*] ['DIRECTION']::
     means forward, 'DIRECTION' = -1 means backward, 'DIRECTION' = 0 has no
     effect. 'DIRECTION' defaults to 1. If there are multiple windows within on
     frame, then it acts similar to the 'cycle' command. (The 'cycle_all' command
-    focuses the next/previous leave in the 'layout' tree.). If
+    focuses the next/previous leaf in the 'layout' tree.). If
     *--skip-invisible* is given, then this only cycles through all visible
     windows and skips invisible windows in the max layout. The focused window
     is raised.
@@ -827,13 +827,13 @@ sprintf 'IDENTIFIER' 'FORMAT' ['ATTRIBUTES' ...] 'COMMAND' ['ARGS' ...]::
 
 mktemp [*bool*|*int*|*string*|*uint*] 'IDENTIFIER' 'COMMAND' ['ARGS' ...]::
     Creates a temporary attribute with the given type and replaces all
-    occurrences of 'IDENTIFIER' in 'COMMAND' and 'ARGS' by by the path of the
+    occurrences of 'IDENTIFIER' in 'COMMAND' and 'ARGS' by the path of the
     temporary attribute. The replaced command with its arguments is executed
     then. The exit status of 'COMMAND' is returned.
 
 compare 'ATTRIBUTE' 'OPERATOR' 'VALUE'::
-    Compares the value of 'ATTRIBUTE' with 'VALUE' using the comparation method
-    'OPERATOR'. If the comparation succeeds, it returns 0, else 1. The operators
+    Compares the value of 'ATTRIBUTE' with 'VALUE' using the comparison method
+    'OPERATOR'. If the comparison succeeds, it returns 0, else 1. The operators
     are:
         - *=*: __ATTRIBUTE__'s value equals 'VALUE'
         - *!=*: __ATTRIBUTE__'s value does not equal 'VALUE'
@@ -1534,7 +1534,7 @@ urgent [on|off] 'WINID'::
     The urgent state of client with given 'WINID' has been changed to [on|off].
 
 rule 'NAME' 'WINID'::
-    A window with the id 'WINID' appeared which triggerd a rule with the
+    A window with the id 'WINID' appeared which triggered a rule with the
     consequence hook='NAME'.
 
 There are also other useful hooks, which never will be emitted by herbstluftwm

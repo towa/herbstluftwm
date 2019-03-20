@@ -1,9 +1,13 @@
 herbstluftwm NEWS -- History of user-visible changes
 ----------------------------------------------------
 
-Current git version
--------------------
+Release 0.7.1 on 2018-08-09
+---------------------------
 
+    * Many bugfixes:
+      - Fix Xlib race condition
+      - Fix _NET_DESKTOP_VIEWPORT
+      - etc
     * New setting: verbose
     * Fix the initial floating position of new windows by taking their
       position relative to the nearest hlwm monitor.
